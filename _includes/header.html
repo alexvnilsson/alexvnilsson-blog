@@ -7,8 +7,7 @@
     {%- assign site_logo = site_images | where: "name", "logo.svg" | first -%}
     {%- if site_logo -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}" title="{{ site.title | escape }}">
-      <img src="{{ site_logo.path | absolute_url }}" width="32" height="32" />
-      <span>{{ site.title | escape }}</span>
+      <img src="{{ site_logo.path | relative_url }}" class="site-logo" />
     </a>
     {%- else -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
